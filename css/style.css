@@ -124,3 +124,13 @@ img  {
 .ending-score-text {
   font-size: 28px;
 }
+
+.high-score-text {
+  font-size: 24px;
+  color: #1919FF;
+}
+
+.high-score-number {
+  display: inline-block;
+  margin-left: 10px;
+}
