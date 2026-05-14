@@ -1,4 +1,9 @@
 
+#canvas-wrapper {
+  transform-origin: top left;
+  width: 1050px;
+}
+
 #info-nav {
   margin: 0 auto;
 }

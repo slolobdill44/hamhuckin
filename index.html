@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Ham Huckin'</title>
   </head>
 
@@ -13,6 +14,7 @@
   <script src="lib/hamhuckin.js" type="text/javascript"></script>
 
   <body id="game-screen" onload="gameStart()">
+    <div id="canvas-wrapper">
     <div class="shots-text">
       Tosses Left:<div class="shots-number">5</div>
     </div>
@@ -24,8 +26,8 @@
     <div id='title-screen'>
       <div class='title-screen-text'>
         <div class='welcome-text'>Welcome to Ham Huckin'</div>
-        <div class='game-instructions'>press and hold spacebar to aim the bacon!</div>
-        <div class='start-instructions'>click anywhere to start</div>
+        <div class='game-instructions' id='game-instructions'>press and hold spacebar to aim the bacon!</div>
+        <div class='start-instructions' id='start-instructions'>click anywhere to start</div>
       </div>
     </div>
 
@@ -38,12 +40,20 @@
       </div>
     </div>
 
+    </div><!-- /canvas-wrapper -->
+
     <footer id="info-nav">
       <p>
         <strong class="title-text">Ham Huckin'</strong>
         <a href="https://github.com/slolobdill44"><img class="github-img" src="assets/github.png" /></a>
       </p>
     </footer>
+    <script>
+      if (window.matchMedia('(pointer: coarse)').matches) {
+        document.getElementById('game-instructions').textContent = 'tap and hold to aim the bacon!';
+        document.getElementById('start-instructions').textContent = 'tap anywhere to start';
+      }
+    </script>
   </body>
 
 
