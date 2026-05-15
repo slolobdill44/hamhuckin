@@ -74,19 +74,20 @@ img  {
   text-align: center;
   display: flex;
   flex-direction: column;
-  line-height: 4.5;
+  line-height: 1.1;
+  gap: 44px;
 }
 
 .welcome-text {
-  font-size: 34px;
+  font-size: 48px;
 }
 
 .game-instructions {
-  font-size: 24px;
+  font-size: 40px;
 }
 
 .start-instructions {
-  font-size: 24px;
+  font-size: 40px;
 }
 
 #game-screen {
@@ -99,26 +100,26 @@ img  {
   font-family: 'Dosis', sans-serif;
   top: 115px;
   right: 258px;
-  font-size: 34px;
+  font-size: 40px;
   position: absolute;
 }
 
 .score-number {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 .shots-text {
   font-family: 'Dosis', sans-serif;
   top: 115px;
   left: 187px;
-  font-size: 34px;
+  font-size: 40px;
   position: absolute;
 }
 
 .shots-number {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 #ending-screen {
@@ -139,25 +140,44 @@ img  {
   text-align: center;
   display: flex;
   flex-direction: column;
-  line-height: 4.5;
+  line-height: 1.1;
+  gap: 50px;
 }
 
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.title-screen-text > *,
+.ending-screen-text > * {
+  animation: textReveal 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.title-screen-text > *:nth-child(2),
+.ending-screen-text > *:nth-child(2) { animation-delay: 0.08s; }
+
+.title-screen-text > *:nth-child(3),
+.ending-screen-text > *:nth-child(3) { animation-delay: 0.16s; }
+
+.ending-screen-text > *:nth-child(4) { animation-delay: 0.24s; }
+
 .game-over-text {
-  font-size: 28px;
+  font-size: 48px;
 }
 
 .ending-score-text {
-  font-size: 28px;
+  font-size: 48px;
 }
 
 .high-score-text {
-  font-size: 24px;
+  font-size: 48px;
   color: #1919FF;
 }
 
 .high-score-number {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 38px;
 }
 
 @media (pointer: coarse) {
@@ -178,7 +198,7 @@ img  {
     top: 0;
     left: 0;
     right: 0;
-    padding: 4px 16px;
+    padding: 6px 16px;
     background: #ffffff;
     box-sizing: border-box;
     z-index: 200;
