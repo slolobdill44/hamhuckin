@@ -103,6 +103,19 @@ img {
   display: none;
 }
 
+/* On mobile, the canvas-wrapper is CSS-scaled, so overlays inside it
+   would be hard to tap. Promote them to fixed full-viewport overlays. */
+@media (pointer: coarse) {
+  #title-screen, #ending-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: none;
+  }
+}
+
 .title-screen-text {
   font-family: 'Dosis', sans-serif;
   text-align: center;
