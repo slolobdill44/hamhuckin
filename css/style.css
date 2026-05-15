@@ -5,6 +5,13 @@
   position: relative;
   left : 3%;
   right-padding: 3%;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#canvas-wrapper canvas {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #info-nav {
@@ -164,7 +171,6 @@ img  {
 
   #canvas-wrapper {
     left: 0;
-    margin: 0 auto;
   }
 
   #info-nav {
@@ -172,7 +178,7 @@ img  {
     top: 0;
     left: 0;
     right: 0;
-    padding: 12px 16px;
+    padding: 4px 16px;
     background: #ffffff;
     box-sizing: border-box;
     z-index: 200;
