@@ -164,6 +164,7 @@ img  {
 
   #canvas-wrapper {
     left: 0;
+    margin: 0 auto;
   }
 
   #info-nav {
