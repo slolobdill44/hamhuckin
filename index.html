@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, orientation=landscape">
     <title>Ham Huckin'</title>
   </head>
 
@@ -42,12 +42,13 @@
 
     </div><!-- /canvas-wrapper -->
 
-    <footer id="info-nav">
+    <header id="info-nav">
       <p>
         <strong class="title-text">Ham Huckin'</strong>
         <a href="https://github.com/slolobdill44"><img class="github-img" src="assets/github.png" /></a>
+        <span class="rotate-hint">rotate your device for optimal experience 🔄</span>
       </p>
-    </footer>
+    </header>
     <script>
       if (window.matchMedia('(pointer: coarse)').matches) {
         document.getElementById('game-instructions').textContent = 'tap and hold to aim the bacon!';
