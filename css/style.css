@@ -1,4 +1,12 @@
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 #info-nav {
   position: fixed;
   top: 0;
@@ -69,11 +77,14 @@ img {
   position: relative;
 }
 
-/* Mobile: JS positions the wrapper absolutely; body needs to contain it */
+/* Mobile: fill the full fixed viewport, no scrolling ever */
 @media (pointer: coarse) {
   #game-screen {
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     padding: 0;
   }
