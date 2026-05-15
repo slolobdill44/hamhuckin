@@ -83,6 +83,7 @@ img {
   width: 1050px;
   height: 602px;
   position: relative;
+  overflow: hidden;
 }
 
 #title-screen {
