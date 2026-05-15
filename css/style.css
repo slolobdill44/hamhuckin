@@ -49,9 +49,9 @@ img  {
   position: absolute;
   left: 0;
   top: 0;
+  width: 1050px;
   height: 602px;
   background: rgba(200,200,200,0.85);
-  width: 100%;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -118,9 +118,9 @@ img  {
   position: absolute;
   left: 0;
   top: 0;
+  width: 1050px;
   height: 602px;
   background: rgba(200,200,200,0.85);
-  width: 100%;
   z-index: 100;
   display: none;
   align-items: center;
