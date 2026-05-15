@@ -1,4 +1,21 @@
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* iOS: stop tap highlights, double-tap-to-zoom, pull-to-refresh, text selection */
+@media (pointer: coarse) {
+  html, body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+}
+
 #info-nav {
   position: fixed;
   top: 0;
@@ -69,13 +86,21 @@ img {
   position: relative;
 }
 
-/* Mobile: JS positions the wrapper absolutely; body needs to contain it */
+/* Mobile: lock to viewport, never scroll */
 @media (pointer: coarse) {
   #game-screen {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;
   }
 }
 
@@ -88,23 +113,23 @@ img {
 
 #title-screen {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 3%;
+  top: 7%;
   height: 602px;
   background: rgba(200,200,200,0.85);
-  width: 100%;
+  width: 1050px;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .no-title-screen {
   display: none;
 }
 
-/* On mobile, the canvas-wrapper is CSS-scaled, so overlays inside it
-   would be hard to tap. Promote them to fixed full-viewport overlays. */
+/* On mobile, overlays cover the full viewport directly */
 @media (pointer: coarse) {
   #title-screen, #ending-screen {
     position: fixed;
@@ -112,7 +137,9 @@ img {
     top: 0;
     width: 100vw;
     height: 100vh;
-    transform: none;
+    height: 100dvh;
+    z-index: 300;
+    touch-action: none;
   }
 }
 
@@ -198,15 +225,16 @@ img {
 
 #ending-screen {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 3%;
+  top: 7%;
   height: 602px;
   background: rgba(200,200,200,0.85);
-  width: 100%;
+  width: 1050px;
   z-index: 100;
   display: none;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .ending-screen-text {
