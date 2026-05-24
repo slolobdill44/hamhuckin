@@ -1,24 +1,6 @@
 # Ham Huckin' — To-Do
 
----
-
-## 1. Mobile Support
-
-Detect when the game is loaded on a mobile device and make it fully playable via touch.
-
-**What needs to happen:**
-- Detect mobile via `navigator.userAgent` or `window.matchMedia('(pointer: coarse)')` on page load
-- Replace spacebar hold/release mechanic with a touch hold/release on the canvas (touchstart = pullback loop, touchend = release)
-- Scale the Matter.js canvas and all absolute-positioned HUD elements to fit the device viewport using CSS transforms or a viewport meta tag + responsive CSS
-- Update game instructions text to say "press and hold the screen" instead of "press and hold spacebar" when on mobile
-- Test that the title screen click-to-start, game-over screen click-to-restart, and scoring all work correctly with touch events
-
-**Prompt to use:**
-> "The game lives in `lib/hamhuckin.js` and `index.html`. The whacker fires by holding spacebar (`document.onkeydown` moves `whackerPullbackAnchor`, `document.onkeyup` releases it). Add mobile touch support: detect mobile with `window.matchMedia('(pointer: coarse)')`, then bind `touchstart` on the canvas to begin the pullback loop (use `setInterval` to repeatedly move the anchor like keydown does) and `touchend` to fire (same as keyup). Also make the canvas scale to fit mobile viewports via CSS — the canvas is 1050px wide, so apply a CSS scale transform based on `window.innerWidth / 1050`. Update the instruction text in `index.html` conditionally. Do not break the existing keyboard controls for desktop."
-
----
-
-## 2. Choosable Throwable Objects
+## 1. Choosable Throwable Objects
 
 Let users pick what they want to huck before the game starts. Each object has distinct physics and a sprite.
 
@@ -34,7 +16,7 @@ Let users pick what they want to huck before the game starts. Each object has di
 
 ---
 
-## 3. Next.js Migration + Vercel Leaderboard
+## 2. Next.js Migration + Vercel Leaderboard
 
 Port the game to a Next.js app and add a persistent leaderboard backed by Vercel Postgres.
 
@@ -51,7 +33,7 @@ Port the game to a Next.js app and add a persistent leaderboard backed by Vercel
 
 ---
 
-## 4. Vercel Edge Config for Game Tuning
+## 3. Vercel Edge Config for Game Tuning
 
 Store game balance parameters in Vercel Edge Config so they can be changed without redeploying.
 
@@ -65,7 +47,7 @@ Store game balance parameters in Vercel Edge Config so they can be changed witho
 
 ---
 
-## 5. AI-Generated Throwable Objects
+## 4. AI-Generated Throwable Objects
 
 Let users type a prompt, generate a pixel art sprite via an image generation API, and throw it.
 

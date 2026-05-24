@@ -65,6 +65,57 @@ img  {
   justify-content: center;
 }
 
+#title-screen.hidden-until-pick {
+  display: none;
+}
+
+#picker-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1050px;
+  height: 602px;
+  background: rgba(200,200,200,0.95);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker-screen-text {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.picker-title {
+  font-size: 48px;
+}
+
+.picker-options {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.picker-option {
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  padding: 18px 28px;
+  background: #593837;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.picker-option:hover {
+  background: #dfa417;
+}
+
 .no-title-screen {
   display: none;
 }

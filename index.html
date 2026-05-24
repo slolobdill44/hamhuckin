@@ -30,7 +30,19 @@
     </div>
     <div class="stack-height"></div>
 
-    <div id='title-screen'>
+    <div id='picker-screen'>
+      <div class='picker-screen-text'>
+        <div class='picker-title'>Pick your projectile</div>
+        <div class='picker-options'>
+          <button class='picker-option' data-throwable='ham'>Ham</button>
+          <button class='picker-option' data-throwable='bowlingBall'>Bowling Ball</button>
+          <button class='picker-option' data-throwable='fish'>Fish</button>
+          <button class='picker-option' data-throwable='rubberDuck'>Rubber Duck</button>
+        </div>
+      </div>
+    </div>
+
+    <div id='title-screen' class='hidden-until-pick'>
       <div class='title-screen-text'>
         <div class='welcome-text'>Welcome to Ham Huckin'</div>
         <div class='game-instructions' id='game-instructions'>press and hold spacebar to aim the bacon!</div>
