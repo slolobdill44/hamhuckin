@@ -1,22 +1,13 @@
 # Ham Huckin' — To-Do
 
-## 1. Choosable Throwable Objects
 
-Let users pick what they want to huck before the game starts. Each object has distinct physics and a sprite.
+## quick stuff
 
-**What needs to happen:**
-- Add a throwable config map in `hamhuckin.js` — each entry defines `width`, `height`, `density`, `friction`, `restitution`, and `sprite` path
-- Create at least 4 objects with meaningfully different physics (e.g. ham, bowling ball, fish, rubber duck)
-- Add a picker screen (HTML overlay, same pattern as `#title-screen` and `#ending-screen`) that displays the options before the game starts
-- When a user selects an object, store the selection and use those values everywhere a hammo body is created (initial spawn, mid-game spawn in `afterUpdate`, and restart in the game-over click handler)
-- Add sprites in `assets/` for each new throwable
+- make ham sprite match other new objects
+- pick sprite for whacker
 
-**Prompt to use:**
-> "In `lib/hamhuckin.js`, all hammo bodies are created with `Bodies.rectangle(x, y, 30, 90, { angle: 40, render: { sprite: { texture: 'assets/ham.png' } } })` — this pattern appears 3 times (initial spawn on line ~114, mid-game respawn in `afterUpdate`, and restart in the game-over handler). Refactor these into a single `spawnHammo(x, y)` function that reads from a `selectedThrowable` config object. Add a `throwables` map with at least 4 entries, each with `width`, `height`, `density`, `friction`, `restitution`, and `sprite`. In `index.html`, add a `#picker-screen` overlay (same structure as `#title-screen`) showing one button per throwable. Clicking a button sets `selectedThrowable`, hides the picker, and shows the title screen. Do not change any scoring, whacker, or game-over logic."
 
----
-
-## 2. Next.js Migration + Vercel Leaderboard
+## 1. Next.js Migration + Vercel Leaderboard
 
 Port the game to a Next.js app and add a persistent leaderboard backed by Vercel Postgres.
 
@@ -33,7 +24,7 @@ Port the game to a Next.js app and add a persistent leaderboard backed by Vercel
 
 ---
 
-## 3. Vercel Edge Config for Game Tuning
+## 2. Vercel Edge Config for Game Tuning
 
 Store game balance parameters in Vercel Edge Config so they can be changed without redeploying.
 
@@ -47,7 +38,7 @@ Store game balance parameters in Vercel Edge Config so they can be changed witho
 
 ---
 
-## 4. AI-Generated Throwable Objects
+## 3. AI-Generated Throwable Objects
 
 Let users type a prompt, generate a pixel art sprite via an image generation API, and throw it.
 
