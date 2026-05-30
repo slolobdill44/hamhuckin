@@ -15,7 +15,7 @@
 }
 
 #info-nav {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   margin: 0;
@@ -65,6 +65,55 @@ img  {
   justify-content: center;
 }
 
+.picker-options {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.picker-option {
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  background: linear-gradient( #cd7d7d 20%, #c08f56 100%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker-option img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  height: auto;
+  position: relative;
+  margin: 0;
+}
+
+.picker-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.picker-option:active {
+  transform: translateY(-2px);
+}
+
+#ham-btn {
+  width: 30px;
+}
+
 .no-title-screen {
   display: none;
 }
@@ -74,19 +123,20 @@ img  {
   text-align: center;
   display: flex;
   flex-direction: column;
-  line-height: 4.5;
+  line-height: 1.1;
+  gap: 44px;
 }
 
 .welcome-text {
-  font-size: 34px;
+  font-size: 48px;
 }
 
 .game-instructions {
-  font-size: 24px;
+  font-size: 40px;
 }
 
 .start-instructions {
-  font-size: 24px;
+  font-size: 40px;
 }
 
 #game-screen {
@@ -96,29 +146,31 @@ img  {
 
 
 .score-text{
+  display: none;
   font-family: 'Dosis', sans-serif;
   top: 115px;
   right: 258px;
-  font-size: 34px;
+  font-size: 40px;
   position: absolute;
 }
 
 .score-number {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 .shots-text {
+  display: none;
   font-family: 'Dosis', sans-serif;
   top: 115px;
   left: 187px;
-  font-size: 34px;
+  font-size: 40px;
   position: absolute;
 }
 
 .shots-number {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 #ending-screen {
@@ -139,25 +191,74 @@ img  {
   text-align: center;
   display: flex;
   flex-direction: column;
-  line-height: 4.5;
+  line-height: 1.1;
+  gap: 50px;
+}
+
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.title-screen-text > *,
+.ending-screen-text > * {
+  animation: textReveal 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.title-screen-text > *:nth-child(2),
+.ending-screen-text > *:nth-child(2) { animation-delay: 0.08s; }
+
+.title-screen-text > *:nth-child(3),
+.ending-screen-text > *:nth-child(3) { animation-delay: 0.16s; }
+
+.ending-screen-text > *:nth-child(4) { animation-delay: 0.24s; }
+
+.or-divider {
+  font-size: 48px;
+  color: #333;
+}
+
+.new-object-btn {
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 22px;
+  background: linear-gradient( #cd7d7d 20%, #c08f56 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-left: 20px;
+}
+
+.new-object-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.new-object-btn:active {
+  transform: translateY(-2px);
 }
 
 .game-over-text {
-  font-size: 28px;
+  font-size: 48px;
 }
 
 .ending-score-text {
-  font-size: 28px;
+  font-size: 48px;
 }
 
 .high-score-text {
-  font-size: 24px;
+  font-size: 48px;
   color: #1919FF;
 }
 
 .high-score-number {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 38px;
 }
 
 @media (pointer: coarse) {
@@ -178,7 +279,7 @@ img  {
     top: 0;
     left: 0;
     right: 0;
-    padding: 4px 16px;
+    padding: 6px 16px;
     background: #ffffff;
     box-sizing: border-box;
     z-index: 200;

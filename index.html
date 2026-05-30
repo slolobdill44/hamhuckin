@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Ham Huckin'</title>
+    <title>Table Toss</title>
   </head>
 
   <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
@@ -16,7 +16,7 @@
   <body id="game-screen" onload="gameStart()">
     <header id="info-nav">
       <p>
-        <strong class="title-text">Ham Huckin'</strong>
+        <strong class="title-text">Table Tosser</strong>
         <a href="https://github.com/slolobdill44"><img class="github-img" src="assets/github.png" /></a>
       </p>
     </header>
@@ -32,9 +32,14 @@
 
     <div id='title-screen'>
       <div class='title-screen-text'>
-        <div class='welcome-text'>Welcome to Ham Huckin'</div>
-        <div class='game-instructions' id='game-instructions'>press and hold spacebar to aim the bacon!</div>
-        <div class='start-instructions' id='start-instructions'>click anywhere to start</div>
+        <div class='welcome-text'>Welcome to Table Tosser</div>
+        <div class='game-instructions' id='game-instructions'>Press and hold spacebar to aim!</div>
+        <div class='game-instructions' id='game-instructions'>Choose an item:</div>
+        <div class='picker-options'>
+          <button class='picker-option' data-throwable='burger' ><img src='assets/hamburger.png' alt='Burger'></button>
+          <button class='picker-option' data-throwable='fish'><img src='assets/fish.png' alt='Fish'></button>
+          <button class='picker-option' data-throwable='rubberDuck'><img src='assets/rubber-duck.png' alt='Rubber Duck'></button>
+        </div>
       </div>
     </div>
 
@@ -43,7 +48,8 @@
         <div class='game-over-text'>Game Over!</div>
         <div class='ending-score-text'>Your score was: <div class='score-number'>0</div></div>
         <div class='high-score-text'>Session High Score: <div class='high-score-number'>0</div></div>
-        <div class='game-over-text'>Click anywhere to restart</div>
+        <div class='game-over-text' id='restart-instructions'>Click anywhere to restart</div>
+        <div class='or-divider'>or <button id='choose-new-object' class='new-object-btn'>click here to toss something else</button></div>
       </div>
     </div>
 
@@ -51,8 +57,8 @@
 
     <script>
       if (window.matchMedia('(pointer: coarse)').matches) {
-        document.getElementById('game-instructions').textContent = 'tap and hold to aim the bacon!';
-        document.getElementById('start-instructions').textContent = 'tap anywhere to start';
+        document.getElementById('game-instructions').textContent = 'Tap and hold to aim!';
+        document.getElementById('restart-instructions').textContent = 'Tap anywhere to restart';
       }
     </script>
   </body>
