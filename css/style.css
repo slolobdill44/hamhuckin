@@ -110,6 +110,10 @@ img  {
   transform: translateY(-2px);
 }
 
+#ham-btn {
+  width: 30px;
+}
+
 .no-title-screen {
   display: none;
 }
