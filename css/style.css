@@ -147,30 +147,34 @@ img  {
 
 .score-text{
   display: none;
-  font-family: 'Dosis', sans-serif;
-  top: 115px;
-  right: 258px;
-  font-size: 40px;
+  font-family: 'Bungee Inline', cursive;
+  top: 65px;
+  left: 526px;
+  width: 390px;
+  text-align: center;
+  font-size: 29px;
   position: absolute;
 }
 
 .score-number {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 24px;
 }
 
 .shots-text {
   display: none;
-  font-family: 'Dosis', sans-serif;
-  top: 115px;
-  left: 187px;
-  font-size: 40px;
+  font-family: 'Bungee Inline', cursive;
+  top: 65px;
+  left: 138px;
+  width: 390px;
+  text-align: center;
+  font-size: 29px;
   position: absolute;
 }
 
 .shots-number {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 16px;
 }
 
 .bonus-text {
@@ -229,25 +233,28 @@ img  {
 }
 
 .bonus-label {
-  color: #6BE36B;
-  font-weight: 700;
-  font-size: 40px;
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
+  color: #C8302C;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 29px;
 }
 
 .bonus-explainer {
-  font-size: 28px;
-  color: #6BE36B;
+  position: absolute;
+  top: 122px;
+  left: 0;
+  width: auto;
+  text-align: center;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 26px;
+  color: #C8302C;
   line-height: 1.1;
-  margin-top: 2px;
 }
 
 .bonus-timer {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 400;
-  color: #6BE36B;
+  margin-top: 27px;
+  color: #C8302C;
   line-height: 1.1;
   display: none;
 }
@@ -345,7 +352,7 @@ img  {
 
 .high-score-text {
   font-size: 48px;
-  color: #1919FF;
+  color: #C8302C;
 }
 
 .high-score-number {

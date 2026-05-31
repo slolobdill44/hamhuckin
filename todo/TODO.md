@@ -3,7 +3,6 @@
 
 ## Next stuff
 
-- Make landingPad 1.5x size
 - Make new intro screen
 - Make pixel art background for game
 - Do levels of 1, 2, 3. one for each object
