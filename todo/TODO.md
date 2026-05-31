@@ -1,10 +1,12 @@
 # Ham Huckin' — To-Do
 
 
-## quick stuff
+## Next stuff
 
-- make ham sprite match other new objects
-- pick sprite for whacker
+- Do levels of 1, 2, 3. one for each object
+- If a user makes all 5, let them shoot until an object drops. Make the first 5 actually kind of easy once you get the hang of it,
+then it's about stacking and the game window zooms out if you reach the top of it
+- Leaderboard that can't be hacked
 
 
 ## 1. Next.js Migration + Vercel Leaderboard

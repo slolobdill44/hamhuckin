@@ -173,6 +173,32 @@ img  {
   margin-left: 40px;
 }
 
+.bonus-text {
+  display: none;
+}
+
+.bonus-label {
+  color: #6BE36B;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.bonus-explainer {
+  font-size: 28px;
+  color: #6BE36B;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+.shots-text.bonus .shots-label,
+.shots-text.bonus .shots-number {
+  display: none;
+}
+
+.shots-text.bonus .bonus-text {
+  display: block;
+}
+
 #ending-screen {
   position: absolute;
   left: 0;
