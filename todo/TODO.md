@@ -3,9 +3,11 @@
 
 ## Next stuff
 
+- Make landingPad 1.5x size
+- Make new intro screen
+- Make pixel art background for game
 - Do levels of 1, 2, 3. one for each object
-- If a user makes all 5, let them shoot until an object drops. Make the first 5 actually kind of easy once you get the hang of it,
-then it's about stacking and the game window zooms out if you reach the top of it
+- Make bonus mode zoom out if stack gets big enough
 - Leaderboard that can't be hacked
 
 
