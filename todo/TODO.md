@@ -4,7 +4,7 @@
 ## Next stuff
 
 - Make new intro screen
-- Make pixel art background for game
+- Bonus game over screen tells you an object fell off
 - Do levels of 1, 2, 3. one for each object
 - Make bonus mode zoom out if stack gets big enough
 - Leaderboard that can't be hacked
