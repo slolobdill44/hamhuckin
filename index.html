@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Table Toss</title>
+    <title>Table Tosser</title>
   </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Bungee+Inline" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="lib/matter.js" type="text/javascript"></script>
@@ -23,11 +23,18 @@
 
     <div id="canvas-wrapper">
     <div class="shots-text">
-      Tosses Left:<div class="shots-number">5</div>
+      <span class="shots-label">Tosses Left:</span><div class="shots-number">5</div>
+      <div class="bonus-text">
+        <div class="bonus-label">Bonus!
+          <div class="bonus-timer">Next shot in: <span class="bonus-timer-value">0.00</span></div>
+        </div>
+        <div class="bonus-explainer">Shoot until any object is knocked off</div>
+      </div>
     </div>
     <div class="score-text">
       Score:<div class="score-number">0</div>
     </div>
+    <div class="welcome-badge">WELCOME</div>
     <div class="stack-height"></div>
 
     <div id='title-screen'>
